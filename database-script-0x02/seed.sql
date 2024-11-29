@@ -6,8 +6,8 @@ INSERT INTO User (user_id, first_name, last_name, email, password_hash, phone_nu
 
 -- Populating Property table with sample data
 INSERT INTO Property (property_id, host_id, name, description, location, pricepernight, created_at, updated_at) VALUES
-('uuid-101', 'uuid-002', 'Cozy Cottage', 'A beautiful cottage in the countryside.', 'Countryside, USA', 150.00, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-('uuid-102', 'uuid-002', 'City Apartment', 'A modern apartment in the city center.', 'City Center, USA', 200.00, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+('uuid-101', 'uuid-002', 'Cozy Cottage', 'A beautiful cottage in the countryside.', 'Countryside, Kenya', 150.00, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('uuid-102', 'uuid-002', 'City Apartment', 'A modern apartment in the city center.', 'City Center, Kenya', 200.00, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 -- Populating Booking table with sample data
 INSERT INTO Booking (booking_id, property_id, user_id, start_date, end_date, total_price, status, created_at) VALUES
