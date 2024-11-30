@@ -25,4 +25,4 @@ Address performance challenges with large datasets by implementing table partiti
 9. Performance Monitoring and Schema Refinement
 Learners monitor query performance using SHOW PROFILE and EXPLAIN ANALYZE, identify bottlenecks, and propose schema changes. Practical tasks include implementing these adjustments and documenting results.
 
-This comprehensive task flow ensures you learn not only to write efficient SQL queries but also to think strategically about database design and optimization. The goal is to prepare you for real-world database challenges in high-performance applications.
+This comprehensive task flow ensures you learn not only to write efficient SQL queries but also to think strategically about database design and optimization.
