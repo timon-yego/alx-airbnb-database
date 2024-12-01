@@ -1,4 +1,4 @@
--- Initial query to retrieve all bookings with user, property, and payment details
+-- Initial query to retrieve filtered bookings with user, property, and payment details
 SELECT 
     b.booking_id,
     b.start_date,
@@ -21,7 +21,11 @@ JOIN
 JOIN 
     Property p ON b.property_id = p.property_id
 LEFT JOIN 
-    Payment pay ON b.booking_id = pay.booking_id;
+    Payment pay ON b.booking_id = pay.booking_id
+WHERE 
+    b.status = 'confirmed' -- Filter for confirmed bookings
+    AND b.start_date >= '2024-01-01' -- Filter for bookings starting from 2024
+    AND pay.amount > 0; -- Filter for bookings with payments greater than 0
 
 -- Analyze the performance of the query
 EXPLAIN ANALYZE
@@ -47,4 +51,9 @@ JOIN
 JOIN 
     Property p ON b.property_id = p.property_id
 LEFT JOIN 
-    Payment pay ON b.booking_id = pay.booking_id;
+    Payment pay ON b.booking_id = pay.booking_id
+WHERE 
+    b.status = 'confirmed' 
+    AND b.start_date >= '2024-01-01'
+    AND pay.amount > 0;
+
