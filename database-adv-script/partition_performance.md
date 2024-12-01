@@ -6,10 +6,10 @@ The objective was to optimize query performance on the Booking table, which cont
 ### Partitioning Implementation:
 - The Booking table was partitioned by range using the start_date column. This ensures data is split across partitions based on specific date ranges.
 - Example partitions created:
-   - Partition 1: Dates before 2024-01-01.
-   - Partition 2: Dates between 2024-01-01 and 2024-12-31.
-   - Partition 3: Dates on or after 2025-01-01.
-
+   - Partition 1: Dates between 2024-01-01 and 2024-04-01.
+   - Partition 2: Dates between 2024-04-01 and 2024-07-01.
+   - Partition 3: Dates between 2024-07-01 and 2024-10-01.
+   - Partition 3: Dates between 2024-10-01 and 2025-01-01.
 ### Performance Testing:
 - Queries fetching bookings within specific date ranges were tested before and after partitioning.
 - The EXPLAIN ANALYZE command was used to measure query execution plans and timing.
